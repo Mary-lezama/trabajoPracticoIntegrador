@@ -7,7 +7,7 @@
 //Punto 1 Estructura de Datos
 // a) Crear un array de objetos llamado libros que contenga al menos 10 libros.
 
-const Libros = [
+const libros = [
     {
         id: 1,
         titulo: "El principito",
@@ -90,6 +90,8 @@ const Libros = [
     },
 ];
 
+//console.log(libros) usamos console.log para ejecutar resultados
+
 // b) Crear un array de objetos llamado usuarios con al menos 5 usuarios.
 
 const usuarios = [
@@ -124,3 +126,121 @@ const usuarios = [
         librosprestados: [7]
     },
 ];
+
+// console.log(usuarios) usamos console.log para ejecutar la variable usuarios
+
+//Punto 2 Funciones de Géstion de Libros 
+
+// a) Implementar una función agregarLibro(id, titulo, autor, anio, genero) que agregue un nuevo libro al 
+// array libros.
+
+// Ya tenemos hecho el array de libros
+//const libros = []
+
+// Realizamos la función para agregar un nuevo libro a nuestra estructura de datos.
+
+function agregarLibro(id, titulo, autor, año, genero) {
+    const nuevoLibro = {
+        id: id,
+        titulo: titulo,
+        autor: autor,
+        año: año,
+        genero: genero,
+    };
+
+    libros.push(nuevoLibro);
+}
+agregarLibro(11, "Amanecer", "Stephenie Meyer", 2008, "Fantasia romantica");
+
+//console.log(libros); para verificar el libro que se agrego
+
+// b) Crear una función buscarLibro(criterio, valor) que permita buscar libros por título, autor o género 
+// utilizando el algoritmo de búsqueda lineal. 
+
+const buscarLibro = (criterio, valor) => {
+    
+    // Recorrer el array de libros
+    for (let i = 0; i < libros.length; i++) {
+        // Comprobar el criterio y comparar el valor
+        if (libros[i][criterio] === valor) {
+            return libros[i]; // Retornar el libro encontrado
+        }
+    }
+}
+
+// Ejemplo de uso
+const resultado = buscarLibro("autor", "Stephenie Meyer");
+if (resultado) {
+    console.log("Libro encontrado:", resultado);
+} else {
+    console.log("Libro no encontrado.");
+}
+
+// c) Desarrollar una función ordenarLibros(criterio) que ordene los libros por título o año utilizando 
+// el algoritmo de ordenamiento burbuja (bubble sort) y luego muestre los libros ordenados en la consola.
+
+// d) Desarrollar una función borrarLibro(id) que elimine el libro que se le pase por parámetro. 
+
+function borrarLibro(id) {
+    libros.Biblio = libros.filter(libro => libro.id !== id);
+  }
+  
+  borrarLibro(2);
+  console.log("Libro Eliminado", libros.Biblio); //podemos confirmar que el libro fue elimando del array
+
+  // Punto 3 Gestión de usuarios
+
+  // a) Implementar una función registrarUsuario(nombre, email) que agregue un nuevo usuario al array usuarios. 
+  // Ya tenemos hecho el array de usuarios
+  //const usuarios = []
+
+function registrarUsuario(nombre, email) {
+    const nuevoUsuario = {
+      id: usuarios.length + 1,
+      nombre: nombre,
+      email: email
+    };
+    
+    usuarios.push(nuevoUsuario);
+  }
+
+  //Ejemplo de uso 
+
+registrarUsuario("Ana", "ana@gmail.com");
+
+console.log(usuarios);
+
+// b) Implementar una función mostrarTodosLosUsuarios() que me devuelva el array completo de usuarios
+
+function mostrarTodosLosUsuarios(usuarios) {
+    return usuarios;
+  }
+  console.log(mostrarTodosLosUsuarios(usuarios));
+
+  // c) Crear una función buscarUsuario(email) que devuelva la información de un usuario dado su email.
+
+  function buscarUsuario(email) {
+    const usuario = usuarios.find(u => u.email === email);
+    return usuario || null;
+  }
+  const resultadoUsuario = buscarUsuario("mary@gmail.com");
+  console.log(resultadoUsuario);
+
+  // d) Implementar una función borrarUsuario(nombre, email) que elimine el usuario seleccionado.
+
+  function borrarUsuario(nombre, email) {
+    const longitudInicial = usuarios.length;
+  
+    usuarios.Eliminar = usuarios.filter(usuario =>
+      ! (usuario.nombre === nombre && usuario.email === email)
+    );
+  
+    if (usuarios.length < longitudInicial) {
+      console.log(`No se encontró el usuario "${nombre}" con el email "${email}".`);
+    } else {
+      console.log(`Usuario "${nombre}" con el email "${email}" ha sido eliminado correctamente.`);
+    }
+  }
+
+  borrarUsuario("Luciana Rojas", "Luciana@gmail.com");
+console.log(usuarios.Eliminar);
