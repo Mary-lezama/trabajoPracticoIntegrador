@@ -8,123 +8,47 @@
 // a) Crear un array de objetos llamado libros que contenga al menos 10 libros.
 
 const libros = [
-    { id: 1, titulo: "El principito", autor: "Antoine de Saint-Exupéry", año: 1943, genero: "Infantil", disponible: true,},
-    { id: 2, titulo: "Harry Potter y la piedra filosofal", autor: "J.K. Rowling", año: 1997, genero: "Fantasia", disponible: true,},
+    { id: 1, titulo: "El principito", autor: "Antoine de Saint-Exupéry ", año: 1942, genero: "Infantil", disponible: true,},
+    { id: 2, titulo: "Harry Potter y la piedra filosofal", autor: " J.K. Rowling", año: 1997, genero: "Fantasia", disponible: true,},
     { id: 3, titulo: "Bajo la misma estrella", autor: "John Green", año: 2012, genero: "ficcion juvenil", disponible: true,},
     { id: 4, titulo: "Enciclopedia de los sabores", autor: "Niki Segnit", año: 2010, genero: "culinario", disponible: true,},
-    {
-        id: 5,
-        titulo: "El león, la bruja y el armario",
-        autor: "C.S. Lewis",
-        año: 1950,
-        genero: "Fantasia",
-        disponible: true,
-    },
-    {
-        id: 6,
-        titulo:  "La culpa es de la vaca",
-        autor: "Gabriel García Márquez",
-        año: 1998,
-        genero: "Autoayuda",
-        disponible: true,
-    },
-    {
-        id: 7,
-        titulo: "En busca de la felicidad",
-        autor: "Chris Gardner",
-        año: 2006,
-        genero: "Autobiografia",
-        disponible: true,
-    },
-    {
-        id: 8,
-        titulo: "El diario de una joven",
-        autor: "Anna Frank",
-        año: 1942,
-        genero: "Memorias",
-        disponible: true,
-    },
-    {
-        id: 9,
-        titulo: "En los zapatos de Valeria 2",
-        autor: "Elísabet Benavent",
-        año: 2013,
-        genero: "Ficcion conteporanea",
-        disponible: true,
-    },
-    {
-        id: 10,
-        titulo: "Crepúsculo",
-        autor: "Stephenie Meyer",
-        año: 2005,
-        genero: "Fantasia romantica",
-        disponible: true,
-    },
+    { id: 5, titulo: "El león, la bruja y el armario", autor: "C.S. Lewis", año: 1950, genero: "Fantasia", disponible: true,},
+    { id: 6, titulo:  "La culpa es de la vaca", autor: "Gabriel García Márquez", año: 1998, genero: "Autoayuda", disponible: true,},
+    { id: 7, titulo: "En busca de la felicidad", autor: "Chris Gardner", año: 2006, genero: "Autobiografia", disponible: true,},
+    { id: 8, titulo: "El diario de una joven", autor: "Anna Frank", año: 1942, genero: "Memorias", disponible: true,},
+    { id: 9, titulo: "En los zapatos de Valeria 2", autor: "Elísabet Benavent", año: 2013, genero: "Ficcion conteporanea", disponible: true,},
+    { id: 10,titulo: "Crepúsculo", autor: "Stephenie Meyer", año: 2005, genero: "Fantasia romantica", disponible: true,},
 ];
 
-//console.log(libros) usamos console.log para ejecutar resultados
+console.log(libros) 
 
 // b) Crear un array de objetos llamado usuarios con al menos 5 usuarios.
 
 const usuarios = [
-    {
-        id: 1,
-        nombre: "Karina pocile",
-        email: "karu@gmail.com",
-        librosprestados: []
-    },
-    {
-        id: 2,
-        nombre: "Mary Lezama",
-        email: "mary@gmail.com",
-        librosprestados: []
-    },
-    {
-        id: 3,
-        nombre: "Enrique Gonzales",
-        email: "gonzales@gmail.com",
-        librosprestados: []
-    },
-    {
-        id: 4,
-        nombre: "Adrian Gomez",
-        email: "Adrian@gmail.com",
-        librosprestados: []
-    },
-    {
-        id: 5,
-        nombre: "Luciana Rojas",
-        email: "Luciana@gmail.com",
-        librosprestados: []
-    },
+    { id: 1, nombre: "Karina pocile", email: "Karu@gmail.com", librosprestados: [] },
+    { id: 2, nombre: "Mary Lezama", email: "Mary@gmail.com", librosprestados: [] },
+    { id: 3, nombre: "Enrique Gonzales", email: "Gonzales@gmail.com", librosprestados: [] },
+    { id: 4, nombre: "Adrian Gomez", email: "Adrian@gmail.com", librosprestados: [] },
+    { id: 5, nombre: "Luciana Rojas", email: "Luciana@gmail.com", librosprestados: [] },
 ];
 
-// console.log(usuarios) usamos console.log para ejecutar la variable usuarios
+console.log(usuarios) 
 
 //Punto 2 Funciones de Géstion de Libros 
 
 // a) Implementar una función agregarLibro(id, titulo, autor, anio, genero) que agregue un nuevo libro al 
 // array libros.
 
-// Ya tenemos hecho el array de libros
-//const libros = []
-
 // Realizamos la función para agregar un nuevo libro a nuestra estructura de datos.
 
 function agregarLibro(id, titulo, autor, año, genero) {
     const nuevoLibro = {
-        id: id,
-        titulo: titulo,
-        autor: autor,
-        año: año,
-        genero: genero,
-    };
+        id: id, titulo: titulo, autor: autor, año: año, genero: genero,};
 
     libros.push(nuevoLibro);
 }
 agregarLibro(11, "Amanecer", "Stephenie Meyer", 2008, "Fantasia romantica");
 
-//console.log(libros); para verificar el libro que se agrego
 
 // b) Crear una función buscarLibro(criterio, valor) que permita buscar libros por título, autor o género 
 // utilizando el algoritmo de búsqueda lineal. 
@@ -180,8 +104,6 @@ function registrarUsuario(nombre, email) {
 
 registrarUsuario("Ana", "ana@gmail.com");
 
-console.log(usuarios);
-
 // b) Implementar una función mostrarTodosLosUsuarios() que me devuelva el array completo de usuarios
 
 function mostrarTodosLosUsuarios(usuarios) {
@@ -211,6 +133,7 @@ function mostrarTodosLosUsuarios(usuarios) {
   console.log(usuarios.eliminar);
   
 // Punto 4 Sistema de Préstamos
+
 // a) Desarrollar una función prestarLibro(idLibro, idUsuario) que marque un libro como no 
 // disponible y lo agregue a la lista de libros prestados del usuario. Luego mostrar que libro 
 // se prestó y a que usuario.
@@ -387,3 +310,152 @@ const librosConPalabrasEnTitulo = () => {
 //Calcular la diferencia en años entre el libro más antiguo y el más nuevo. Para este punto es 
 // recomendable usar el objeto Math()
 
+function calcularEstadisticas() {
+    // 1. Obtener array con los años
+    const años = libros.map(libro => libro.año);
+  
+    // 2. Calcular el promedio
+    const sumaAños = años.reduce((acum, año) => acum + año, 0);
+    const promedio = sumaAños / años.length;
+  
+    // 3. Encontrar el año más frecuente
+    const frecuencia = {};
+    let maxFrecuencia = 0;
+    let añoMasFrecuente = null;
+  
+    for (const año of años) {
+        frecuencia[año] = (frecuencia[año] || 0) + 1;
+        if (frecuencia[año] > maxFrecuencia) {
+            maxFrecuencia = frecuencia[año];
+            añoMasFrecuente = año;
+        }
+    }
+  
+    // 4. Calcular la diferencia entre el más antiguo y el más nuevo
+    const añoMin = Math.min(...años);
+    const añoMax = Math.max(...años);
+    const diferencia = añoMax - añoMin;
+  
+    // Mostrar resultados
+    console.log("Años de publicación:", años);
+    console.log("Promedio de años:", Math.floor(promedio));
+    console.log("Año más frecuente:", añoMasFrecuente);
+    console.log(`Diferencia entre el libro más antiguo (${añoMin}) y el más nuevo (${añoMax}): ${diferencia} años`);
+  }
+  
+  // Llamar a la función
+  calcularEstadisticas();
+
+  // Punto 8 Manejo de Cadenas
+
+//Crear una función normalizarDatos() que utilice métodos de strings para:
+//Convertir todos los títulos a mayúsculas.
+//Eliminar espacios en blanco al inicio y final de los nombres de autores.
+//Formatear los emails de los usuarios a minúsculas.
+
+function normalizarDatos() {
+    // 1. Normalizar títulos y autores en libros
+    libros.forEach(libro => {
+      // Convertir título a mayúsculas
+      libro.titulo = libro.titulo.toUpperCase();
+  
+      // Quitar espacios al principio y final del autor
+      libro.autor = libro.autor.trim();
+    });
+  
+    // 2. Normalizar correos electrónicos en usuarios
+    usuarios.forEach(usuario => {
+        usuario.email = usuario.email.toLowerCase();
+    });
+}
+        
+normalizarDatos();
+console.log(libros);
+console.log(usuarios);
+
+// Punto 9 Interfaz de Usuario por Consola
+// Implementar una función menuPrincipal() que muestre un menú de opciones al usuario y permita 
+// interactuar con el sistema utilizando prompt().
+
+const prompt = require('prompt-sync')();
+
+function menuPrincipal() {
+    let opciones;
+
+    do {
+        opciones = prompt(
+            "Bienvenido al Sistema de Biblioteca\n\n" +
+            "1. Ver lista de libros\n" +
+            "2. Prestar libro\n" +
+            "3. Devolver libro\n" +
+            "4. Ver estadísticas\n" +
+            "5. Normalizar emails de usuarios\n" +
+            "0. Salir\n\n" +
+            "Seleccione una opción:"
+        );
+
+        switch (opciones) {
+            case "1":
+                verLibros();
+                break;
+
+            case "2":
+                const idLibro = parseInt(prompt("Ingrese el ID del libro a prestar:"));
+                const idUsuario = parseInt(prompt("Ingrese el ID del usuario que lo solicita:"));
+                if (!isNaN(idLibro) && !isNaN(idUsuario)) {
+                    prestarLibro(idLibro, idUsuario);
+                } else {
+                    alert("Datos inválidos. Intente nuevamente.");
+                }
+                break;
+
+            case "3":
+                const idDevLibro = parseInt(prompt("Ingrese el ID del libro a devolver:"));
+                const idDevUsuario = parseInt(prompt("Ingrese el ID del usuario que lo devuelve:"));
+                if (!isNaN(idDevLibro) && !isNaN(idDevUsuario)) {
+                    devolverLibro(idDevLibro, idDevUsuario);
+                } else {
+                    alert("⚠️ Datos inválidos. Intente nuevamente.");
+                }
+                break;
+
+            case "4":
+                calcularEstadisticas();
+                break;
+
+            case "5":
+                normalizarEmails();
+                break;
+
+            case "6":
+                verUsuarios();
+                break;
+
+        }
+
+    } while (opciones !== "0");
+}
+
+menuPrincipal()
+
+
+function verLibros() {
+    const lista = libros.map(libro =>
+        `ID: ${libro.id} - ${libro.titulo} (${libro.año}) - Disponible: ${libro.disponible ? "Sí" : "No"}`
+    ).join("\n");
+    alert("📖 Libros:\n\n" + lista);
+}
+
+function verUsuarios() {
+    const lista = usuarios.map(usuario =>
+        `ID: ${usuario.id} - ${usuario.nombre} - Email: ${usuario.email} - Libros prestados: [${usuario.librosprestados.join(", ")}]`
+    ).join("\n");
+    alert("👥 Usuarios:\n\n" + lista);
+}
+
+function normalizarEmails() {
+    usuarios.forEach(usuario => {
+        usuario.email = usuario.email.toLowerCase();
+    });
+    alert("✅ Emails normalizados a minúsculas.");
+}
